@@ -1,9 +1,11 @@
-import { Building as BuildingIcon, Calendar, MapPin, Clock, AlertCircle } from 'lucide-react';
+import { Calendar, MapPin, Clock, Edit2, Trash2 } from 'lucide-react';
 import type { Building as BuildingType } from '../../types';
 
 interface BuildingCardProps {
     building: BuildingType;
     onClick: (id: string) => void;
+    onEdit: () => void;
+    onDelete: () => void;
 }
 
 export function BuildingCard({ building, onClick }: BuildingCardProps) {
