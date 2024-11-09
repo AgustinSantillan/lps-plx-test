@@ -123,7 +123,8 @@ function BuildingList() {
             </div>
           )}
 
-          {editingBuilding && (
+          {/** 
+           {editingBuilding && (
             <div className="mb-6">
               <BuildingForm
                 initialData={editingBuilding}
@@ -132,6 +133,7 @@ function BuildingList() {
               />
             </div>
           )}
+          */}
 
           <div className="space-y-4">
             {filteredBuildings.map((building) => (
