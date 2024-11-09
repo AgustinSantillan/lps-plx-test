@@ -19,7 +19,7 @@ export function WeeklyPlanningBoard() {
   };
 
   const handleDeletePlan = (planId: string) => {
-    if (window.confirm('Are you sure you want to delete this plan?')) {
+    if (window.confirm('¿Estás seguro de que deseas eliminar este plan?')) {
       deleteWeeklyPlan(planId);
     }
   };
