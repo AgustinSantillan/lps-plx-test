@@ -41,9 +41,11 @@ function BuildingList() {
     setShowAddForm(false);
   };
 
-  const handleUpdateBuilding = (building: Building) => {
-    updateBuilding(building);
-    setEditingBuilding(null);
+  const handleUpdateBuilding = (buildingData: Omit<Building, 'id'>) => {
+    if (editingBuilding) {
+      updateBuilding({ ...buildingData, id: editingBuilding.id });
+      setEditingBuilding(null);
+    }
   };
 
   const handleDeleteBuilding = (id: string) => {
@@ -123,8 +125,7 @@ function BuildingList() {
             </div>
           )}
 
-          {/** 
-           {editingBuilding && (
+          {editingBuilding && (
             <div className="mb-6">
               <BuildingForm
                 initialData={editingBuilding}
@@ -133,7 +134,6 @@ function BuildingList() {
               />
             </div>
           )}
-          */}
 
           <div className="space-y-4">
             {filteredBuildings.map((building) => (
