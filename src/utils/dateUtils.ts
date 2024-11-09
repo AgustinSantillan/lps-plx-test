@@ -14,7 +14,7 @@ export function getWeekStartDate(date: Date): Date {
 }
 
 export function formatDate(date: Date): string {
-  return new Intl.DateTimeFormat('en-US', {
+  return new Intl.DateTimeFormat('es-ES', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
